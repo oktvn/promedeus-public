@@ -1,0 +1,360 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar,
+.secondary-nav {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 99;
+}
+
+.secondary-nav {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+.navbar-nav>li>a {
+  color: #fff;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar-nav>li.active>a {
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+  }
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+  background-color: transparent;
+}
+
+
+.card {
+  padding: 10px;
+  img {
+    width: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-medium {
+  font-weight: 600;
+}
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 75, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+@each $space in $spaceamounts {
+  .margin#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .padding#{$space} {
+    padding: #{$space}px !important;
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  min-height: 90px;
+}
+
+.with-bg {
+  height: 230px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-inverted {
+  color: #fff !important;
+}
+
+.header-phone-nr {
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.12);
+}
+
+.hero h1 {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.12);
+}
+
+.form-control {
+  border-radius: 0;
+
+}
+
+.service-box {
+  position: relative;
+  height: 115px;
+  margin: 0 -15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  .icon {
+    color: #fff;
+    font-size: 50px;
+    float: left;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+  }
+  &.first.active {
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: -50vw;
+      width: 50vw;
+    }
+  }
+  &.last {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  &.last.active {
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      right: -50vw;
+      width: 50vw;
+    }
+  }
+  &.active {
+    background: #fff;
+    color: #000;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      z-index: -1;
+    }
+
+    .icon {
+      color: #5bb7ed;
+    }
+  }
+  .tab-toggle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.shade {
+  position: relative;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #292929 0%, #929292 51%);
+    z-index: 0;
+    opacity: .5;
+  }
+}
+
+
+.light-border {
+  border: 1px solid #e5e5e5;
+}
+
+.inner-slider {
+  background: rgba(0, 0, 0, 0.20);
+  position: relative;
+  z-index: 99;
+}
+
+.bring-forward {
+  position: relative;
+  z-index: 99;
+}
+
+.btn.rounded {
+  border-radius: 30px;
+  padding: 6px 20px;
+  &.btn-lg {
+    padding: 10px 25px;
+  }
+}
+
+.heart-bg {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 110px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.hero {
+  >.container {
+    height: 500px;
+  }
+  &:after {
+    background-image: url('https://promedeus2-oktvn.c9users.io/wp-content/themes/tg-theme/img/temp/half1.png');
+    background-position: bottom center;
+  }
+}
+
+.main-tab-conts {
+  &:after {
+    background-image: url('https://promedeus2-oktvn.c9users.io/wp-content/themes/tg-theme/img/temp/half2.png');
+    background-position: top center;
+  }
+}
+
+.hero {
+  .subtext {
+    display: block;
+    line-height: 2em;
+    padding: 5px 0px;
+  }
+  .cita-btn {
+    position: relative;
+    top: -7px;
+    .arrow {
+      position: relative;
+      top: 2px;
+      right: -4px;
+    }
+  }
+}
+
+.o-puedes {
+  position: relative;
+  top: -7px;
+  margin: 0 20px;
+  font-style: italic;
+  opacity: .8;
+}
+
+.btn {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-width: 1px;
+  border-radius: 0;
+  padding: 6px 20px;
+  &.btn-lg {
+    padding: 10px 25px;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background: transparent !important;
+    border: 1px solid #fff !important;
+  }
+}
+
+.btn-gradient {
+  background-image: linear-gradient(to right, #0e81d2 0%, #47d4ea 51%, #9857d4 100%);
+  background-size: 199% auto;
+  /* background-position: right center; */
+  border-color: transparent;
+  color: #fff;
+  transition: 0.5s;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff !important;
+    border: 1px solid transparent !important;
+    background-image: linear-gradient(to right, #0e81d2 0%, #47d4ea 51%, #9857d4 100%);
+  }
+}
+
+.image-box {
+  height: 200px;
+}
+.text-box {
+  height: 185px;
+}
+
+.cumulativ {
+  height: 385px;
+  background-image: url(http://medical-clinic.cmsmasters.net/wp-content/uploads/2015/11/3-3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+  .inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33%;
+  }
+}

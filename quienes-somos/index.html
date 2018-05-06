@@ -170,7 +170,7 @@
     <div class="pt60"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" id="form-titles">
                 <h2 class="section-heading"></h2>
                 <h3 class="section-subheading"></h3>
                 <div class="mt50"></div>
@@ -178,39 +178,66 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                 <div role="form" class="wpcf7" id="wpcf7-f413-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"></div>
-<form action="/quienes-somos/#wpcf7-f413-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="413" />
-<input type="hidden" name="_wpcf7_version" value="5.0.1" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f413-o1" />
-<input type="hidden" name="_wpcf7_container_post" value="0" />
-</div>
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-<div class="form-group">
-            <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Tu nombre" /></span></p>
-<p class="help-block text-danger">
-</p></div>
-<div class="form-group">
-            <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Tu email" /></span></p>
-<p class="help-block text-danger">
-</p></div>
-<div class="form-group">
-            <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="4" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Tu mensaje"></textarea></span></p>
-<p class="help-block text-danger">
-</p></div>
-</p></div>
-<div class="col-lg-12 text-center">
-        <input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit btn btn-primary btn-xl text-uppercase" /></p></div>
-</div>
-<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>            </div>
+
+            <form id="gform" method="POST" class="pure-form pure-form-stacked" action="https://script.google.com/macros/s/AKfycbxqtQ1TRXGFzIRFerOlGGxi0byP3zHQHWdFOOZ43J9emfsjq69K/exec">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                    
+                        <fieldset class="mb15">
+                          <label for="name" class="sr-only hidden">Name: </label>
+                          <input id="name" name="name" required placeholder="Nombre y appelido" class="form-control" />
+                        </fieldset>
+                        <fieldset class="mb15">
+                          <label for="name" class="sr-only hidden">Email: </label>
+                          <input id="email" name="email" type="email" value="" required placeholder="nombre.apellido@sitio.com"  class="form-control" />
+                          <span id="email-invalid" style="display:none">
+                            Must be a valid email address</span>                        
+                        </fieldset>
+                        <fieldset class="mb15">
+                          <label for="name" class="sr-only hidden">Phone: </label>
+                          <input id="phone" name="phone" required placeholder="Telefono" class="form-control" />
+                        </fieldset>
+                        <fieldset class="mb15">
+                          <label for="name" class="sr-only hidden">Mensaje: </label>
+                          <textarea id="message" name="message" rows="5" required placeholder="Con que podemos ayudarte..." class="form-control"></textarea>
+                        </fieldset>
+                        
+                              
+
+
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row" style="display: none;" id="thankyou_message">
+                <div class="col-md-offset-2 col-md-2 text-center">
+                    <img class="img-responsive" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDc2IDc2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3NiA3NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnIGlkPSJfeDM3XzdfRXNzZW50aWFsX0ljb25zXzY1XyI+Cgk8cGF0aCBpZD0iVGljayIgZD0iTTM4LDBDMTcsMCwwLDE3LDAsMzhzMTcsMzgsMzgsMzhzMzgtMTcsMzgtMzhTNTksMCwzOCwweiBNMzgsNzJDMTkuMiw3Miw0LDU2LjgsNCwzOFMxOS4yLDQsMzgsNHMzNCwxNS4yLDM0LDM0ICAgUzU2LjgsNzIsMzgsNzJ6IE02MC45LDI1LjFjLTAuOC0wLjgtMi0wLjgtMi44LDBMMzIuNiw1MC43TDIxLjksNDBjLTAuOC0wLjgtMi4xLTAuOC0yLjgsMGMtMC44LDAuOC0wLjgsMi4xLDAsMi44bDEyLjEsMTIuMSAgIGMwLjQsMC40LDAuOSwwLjYsMS40LDAuNnMxLTAuMiwxLjQtMC42bDI2LjktMjdDNjEuNywyNy4xLDYxLjcsMjUuOSw2MC45LDI1LjF6IiBmaWxsPSIjMjFjYzRlIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+                </div>
+                <div class="col-md-6 pl40 pt10">
+                    <h2>Gracias por contactarnos<br>en breve nos comunicaremos </h2>
+                    <h4 style="color: #868686; line-height: 30px;">
+                        recuerda que también puedes contactarnos <br>vía nuestro numero de telefono: 
+                        <strong><span class="medical-icon-phone-call mr5"></span>683 633 977</strong>
+                    </h4>
+                    
+                </div>
+            </div>
+                
+
+            
+            
+                            
+
+            </div>
         </div>
     </div>
     <div class="pt60"></div>
 </div>
+
+
 
 
 

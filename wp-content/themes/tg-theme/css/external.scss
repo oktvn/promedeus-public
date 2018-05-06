@@ -1,0 +1,141 @@
+.sliced-business-logo {
+	width: 120px !important;
+	    padding: 25px;
+    margin-top: -10px;
+}
+body { 
+	background-color: #fff;
+}
+.sliced-wrap {
+	border: 1px solid #000;
+    box-shadow: none;
+}
+.sliced-wrap .table th, .sliced-wrap .table td, .sliced-wrap .table-bordered {
+    border: 0;
+}
+body, a {
+	color: #000;
+}
+
+.invoice-no {
+    padding: 30px;
+    display: block;
+    @media screen and (min-width: 768px) { 
+    border: 1px solid #000;
+    margin-right: -1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+	}
+}
+.sliced-business {
+	height: 80px;
+	overflow: hidden;
+}
+.sliced-wrap {
+	padding: 0;
+	border-top: 0;
+}
+.row.sliced-header {
+	border-bottom: 1px solid #000;
+    border-left: 1px solid #fff;
+    margin-left: -1px;
+	margin-bottom: 0;
+}
+.sliced-upper {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+.sliced-from-address, .sliced-middle {
+	padding: 50px;
+	@media screen and (max-width: 767px) { 
+	   padding: 10px; 
+	}
+}
+.sliced-from-address {
+	border-right: 1px solid #000;
+}
+.payment-inst {
+	padding: 50px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    @media screen and (max-width: 767px) { 
+	   padding: 10px; 
+	}
+}
+.weinvoiceu {
+	padding: 50px;
+	@media screen and (max-width: 767px) { 
+	   padding: 10px; 
+	}
+}
+.terms-text {
+    border-color: #000;
+}
+.from, .to {
+	margin-bottom: 10px;
+}
+.sliced-address .wrapper {
+	line-height: 30px;
+}
+.sliced-address .wrapper .spacer {
+	padding: 15px 0;
+}
+.sliced-address .wrapper .name {
+	font-weight: 700;
+}
+.signing-field {
+	border-top: 1px solid #000;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) { 
+    .sliced-wrap *, .sliced-wrap {
+        border: 0;
+    }
+    img.logo {
+        display: block;
+        margin: 0 auto;
+    }
+    .col-xs-12.col-sm-offset-2.text-right {
+        text-align: left;
+        margin-top: 20px;
+        td {
+            padding: 0;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    .sliced-wrap *, .sliced-wrap {
+        font-size: 12px;
+    }
+}
+
+@media print
+{    
+    .no-print, .no-print *, .sliced-top-bar
+    {
+        display: none !important;
+    }
+    body > .container.sliced-wrap {
+        border-top: 1px solid #000;
+    }
+    .sliced-header > div {
+        text-align: center;
+        img {
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .invoice-no {
+            padding: 15px;
+        }
+    }
+    .row.sliced-header {
+        border-left: 0;
+    }
+}
